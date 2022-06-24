@@ -76,14 +76,14 @@ def decode_val(list_in):
 
 
 if __name__ == "__main__":
-    word = input("Р’РІРµРґРёС‚Рµ СЃР»РѕРІРѕ, РєРѕС‚РѕСЂРѕРµ РІС‹ С…РѕС‚РёС‚Рµ Р·Р°С€РёС„СЂРѕРІР°С‚СЊ, РЅР° Р°РЅРіР»РёР№СЃРєРѕРј ")
-    key = input("Р’РІРµРґРёС‚Рµ РєРѕСЋС‡, РєРѕС‚РѕСЂС‹Рј Р±СѓРґРµРј С€РёС„СЂРѕРІР°С‚СЊ СЃР»РѕРІРѕР± РЅР° Р°РЅРіР»РёР№СЃРєРѕРј ")
+    word = input("Enter the word you want to encrypt in English ")
+    key = input("Enter the key with which we will encrypt the word in English")
 
-    print('РЎР»РѕРІРѕ ', word)
-    print('РљР»СЋС‡', key)
+    print('Word ', word)
+    print('Key', key)
     key_encoded = encode_val(key)
     value_encoded = encode_val(word)
 
 
     shifre = full_encode(value_encoded, key_encoded)
-    print('Р—Р°С€РёС„СЂРѕРІР°РЅРѕРѕРµ СЃР»РѕРІРѕ=', ''.join(decode_val(shifre)))
+    print('Encrypted key=', ''.join(decode_val(shifre)))
